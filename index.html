@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Hire Workers to earn BUSD" name="description">
+	<meta name="image" content="images/opimage.png">
+	<!-- opengraph image -->
+	<meta property="og:image" content="images/opimage.png">
+	<meta property="og:title" content="BUSD FARM">
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Hire Miners to earn BUSD">
+	<meta property="og:url" content="index.html">
+	<!-- Twitter meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="index.html">
+	<meta name="twitter:title" content="BUSD FARM">
+	<meta name="twitter:description" content="Hire Workers to earn BUSD">
+	<meta name="twitter:image" content="images/opimage.png">
+	<!-- favicon files -->
+	 <link rel="icon" type="image/png" href="images/icon.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="images/icon.png" sizes="16x16" />
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<title>BUSD FARM</title>
+	<!-- bootstrap core CSS -->
+	<link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/custom.css" rel="stylesheet">
+	<!-- <link href="fonts.min.css" rel="stylesheet" type="text/css"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+	
+	<style>
+	
+	@media only screen and (min-width: 650px) {
+		.custom-container {
+			background-color: silver;
+			padding-left: 64px;
+			padding-right: 64px;
+			color: black!important;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		body {
+			background: silver;
+			color: black!important;
+		}
+	}
+
+	.inlinestyle {
+		display: flex;
+		list-style: none;
+		padding: 16px;
+		
+	}
+	
+	.inlinestyle > a {
+		padding-right: 8px;
+	}
+	
+	p {
+		word-wrap: break-word;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="modal" id="myModal">
+		<div class="modal-content">
+			<div id="modal-internal"></div>
+		</div>
+	</div>
+	<div class="custom-container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div></div>
+				<div class="navbar-header">
+				</div>
+
+				<div class="mobile-align">
+								<ul class="nav navbar-nav navbar-right font-weight-normal">
+											<ul class="nav navbar-nav navbar-right font-weight-normal">
+													<ul class="nav navbar-nav navbar-right font-weight-normal">
+													
+										
+										<li>
+											<a class="social-pad" href="https://t.me/BUSD_Farm_miner" target="_blank"><img alt="telegram" class="social-icons" src="images/telegram.svg">
+											<span class="">Telegram</span></a>
+										</li>									
+													
+										<li><a class="social-pad"
+													href="https://bscscan.com/address/0xc77d7C3Fb5959479A4881CFDEa3232EA0bFb59c1#code"
+													target="_blank"><img alt="BscScan Logo" class="social-icons" src="images/bscan_logo.png"><span
+													class="">Contract</span></a></li>
+											</ul>
+						</ul>
+
+				</div>
+			</div>
+		</nav>
+		<div>
+			<ul style="display:none;" class="nav nav-tabs nav-justified" id="myTabs" role="tablist">
+				<li role="presentation" class="active"><a href="index.html#home" id="miners-tab" role="tab" data-toggle="tab"
+						aria-controls="home" aria-expanded="true">BUSD Farm</a></li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade active in" role="tabpanel" id="home" aria-labelledby="miners-tab">
+
+
+					<div class="banner">
+						<img width="350px" src="images/Logo%20Horizontaal.png" alt="">
+					</div>
+					<div>
+						<div class="container-fluid miners-tally-container">
+							<img alt="Workers" class="icon" src="images/worker.png" style="height: 60px;width: 63px;">
+							<h2 class="tally-text"><u><span class="num-miners">0</span></u> Workers</h2>
+						</div>
+						<div class="digging-mined-container">
+							<div class="custom-row">
+								<img alt="Digging" class="icon" src="images/speed.png">
+								<div class="dm-container-right">
+									<h2>Production Speed</h2>
+									<p><span id="production-rate">0</span> Units per hour</p>
+								</div>
+							</div>
+							<div class="custom-row">
+								<img alt="Produced" class="icon" src="images/produced.png">
+								<div class="dm-container-right">
+									<h2>Ready for payout</h2>
+									<p style=""><span id="sell-price">?</span> BUSD</p>
+									<!--<p style=""><span id="until-full">?</span> until full</p>-->
+								</div>
+							</div>
+						</div>
+
+						<div class="spend-container">
+							<div class="spend-input-continer">
+								<label for="approve">1. Enter BUSD Amount & Click Approve Below</label>
+								<div class="spend-input">
+									<input class="form-control" id="spend-allowance" name="approve" onchange="" step="1000"
+									type="number" value="50">
+									<span class="bnb-text">BUSD</span>
+													</div>
+									<button class="btn btn-lg btn-buy" onclick="approve()" role="button">
+								Approve Spend
+							</button>
+							<div style="font-weight: bold;color: green;text-align: center;padding: 16px;" id="approvedValue"></div>
+							<p id="spend-limit"></p>
+
+								<label for="spend">2. Enter BUSD Amount & Click Hire Below</label>
+								<div class="spend-input">
+									<input class="form-control" id="eth-to-spend" name="spend" onchange="updateBuyPrice()" step="100"
+									type="number" value="50">
+									<span class="bnb-text">BUSD</span>
+								</div>
+							</div>
+							<div id="compoundWarning" style="display: none; color: blue; padding: 8px;">Information: You have unpaid BUSD. A buy will reinvest this tokens as well!</div>
+							<button id="buyButton" class="btn btn-lg btn-buy" onclick="buyEggs2()" role="button">
+								Hire <span id="eggs-to-buy-2">?</span> Workers
+							</button>
+						</div>
+						<div class="other-button-container">
+							<button class="btn btn-lg btn-hatch" onclick="hatchEggs1()"
+									role="button">Hire more Workers</button>
+							<button class="btn btn-lg btn-sell"
+									onclick="sellEggs(displayTransactionMessage); document.getElementById('sellprice')"
+									role="button">Pocket your BUSD</button>
+						</div>
+
+						<div class="altcolor">
+							<img alt="Digging" class="icon" src="images/BUSD.png">
+							<div>
+								<p>Contract: <span id="contract-balance">?</span></p>
+								<p>You: <span id="user-balance">?</span></p>
+							</div>
+						</div>
+						
+						<div class="altcolor">
+							<p>Earn 10% of the BUSD used to hire miners by anyone who starts with BUSD-Farm
+									using your link: <b><a id="playerreflink" onclick="copyRef()">?
+									<p></p><input id="copytextthing" style="display:none;" type="text" value="Hello Worldfdgerh"></a></b>
+
+						</div>
+						
+						<div class="altcolor" style="display: block;">
+							<a href="https://pancakeswap.finance/swap?outputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56" target="_blank"><img style="width: 100%;" src="images/buyOnPancake.png"></a>
+						</div>
+						
+												
+						<div class="altcolor" style="display: block;">
+							<p>
+								<b>Farm information</b>
+							</p>
+							<p>
+							 BUSD-Farm pays 10% daily, according to the current production efficiency rate. The production efficiency rate rises and falls as you and other players hire workers, compound earnings and pocket BUSD.
+<br>
+The object of the game is hiring more workers, sooner and more often than other players. This in turn earns you more BUSD faster.
+							</p>
+						</div>
+					
+						
+						<div class="altcolor" style="display: block;">
+							<p>
+								<b>Read before use</b>
+							</p>
+							<p>						
+								The principal deposit cannot be withdrawn, the only return users can get are daily dividends and referral rewards. Payments is possible only if contract balance have enough BUSD. Please analyze the transaction history and balance of the smart contract before investing. High risk - high profit, DYOR
+							</p>
+						</div>
+						
+						<div>
+							<ul class="inlinestyle">
+
+										<li>
+											<a class="social-pad" href="https://t.me/BUSD_Farm_miner" target="_blank"><img alt="telegram" class="social-icons" src="images/telegram.svg">
+											<span class="">Telegram</span></a>
+										</li>
+												
+
+										<li><a class="social-pad"	href="https://bscscan.com/address/0xc77d7C3Fb5959479A4881CFDEa3232EA0bFb59c1#code"
+													target="_blank"><img alt="BscScan Logo" class="social-icons" src="images/bscan_logo.png"><span
+													class="">Contract</span></a></li>
+							</ul>
+						</div>
+						<div style="font-size: 10px; float: right;">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- scripts -->			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/interface.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/web3.min.js"></script>
+			<script src="assets/js/main_eth.js"></script>
+			<script src="assets/js/crypto-js/4.0.0/crypto-js.min.js"></script>
+			
+
+</body>
+
+
+</html>
